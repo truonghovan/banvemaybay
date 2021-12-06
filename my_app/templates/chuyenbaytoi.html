@@ -1,0 +1,48 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<h1 class="text-center text-info">CHUYẾN BAY CỦA TÔI</h1>
+
+{%if  vechuyenbay==None%}
+    <div class="text-center">
+    <h4 >Quý khách không có chuyến bay nào</h4>
+    <button class="btn btn-danger" style="margin-bottom: 20px">
+            <a href="/chuyenbaycuatoi">Quay lại</a>
+        </button>
+    </div>
+{%else%}
+
+
+
+</div>
+<table class="table table-success table-striped" style="padding: 10px; border: 2px solid black; margin-top: 10px;margin-bottom: 10px; ">
+ <thead>
+    <tr>
+        <th scope="col">STT</th>
+      <th scope="col">Sân Bay Đi</th>
+      <th scope="col">Sân Bay Đến</th>
+        <th scope="col">Thời Gian Bắt Đầu</th>
+      <th scope="col">Thời gian bay</th>
+      <th scope="col">Hình Thức Bay</th>
+        <th scope="col">Giá Tiền</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {%for i in vechuyenbay%}
+    <tr>
+      <th scope="row">{{i.matuyenbay}}</th>
+      <td>{{i.SanBayDi}}</td>
+      <td>{{i.SanBayDen}}</td>
+        <td>{{i.ngaygio}}</td>
+      <td>{{i.thoigianbay}}</td>
+        <td>Bay Thẳng</td>
+        <td>{{i.giatien}}</td>
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+<div class="text-center">
+
+</div>
+{%endif%}
+{% endblock %}

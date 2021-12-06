@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+   <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" href="static/pack/images/favicon.png" type="image/x-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+        <!-- Bootstrap Stylesheet -->
+        <link rel="stylesheet" href="static/pack/css/bootstrap.min.css">
+
+        <!-- Font Awesome Stylesheet -->
+        <link rel="stylesheet" href="static/pack/css/font-awesome.min.css">
+
+        <!-- Custom Stylesheets -->
+        <link rel="stylesheet" href="static/pack/css/style.css">
+        <link rel="stylesheet" id="cpswitch" href="static/pack/css/orange.css">
+        <link rel="stylesheet" href="static/pack/css/responsive.css">
+
+        <!-- Owl Carousel Stylesheet -->
+        <link rel="stylesheet" href="static/pack/css/owl.carousel.css">
+        <link rel="stylesheet" href="static/pack/css/owl.theme.css">
+
+        <!-- Flex Slider Stylesheet -->
+        <link rel="stylesheet" href="static/pack/css/flexslider.css" type="text/css" />
+        <link rel="stylesheet" href="static/pack/css/style-search.css" type="text/css" />
+        <!--Date-Picker Stylesheet-->
+        <link rel="stylesheet" href="static/pack/css/datepicker.css">
+
+        <!-- Magnific Gallery -->
+        <link rel="stylesheet" href="static/pack/css/magnific-popup.css">
+        <script src="{{ url_for('static',filename='js/script.js')}}"></script>
+    {% endblock %}
+</head>
+<!--bố cục trang chủ của page-->
+<body>
+
+    {% block header %}
+        {% include 'layout/header.html' %}
+    {% endblock %}
+    <div>
+    {% block content %}
+    {% endblock  %}
+</div>
+    {% block footer %}
+        {% include 'layout/footer.html' %}
+    {% endblock %}
+
+</body>
+</html>

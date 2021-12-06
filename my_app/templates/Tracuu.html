@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+   <form  method="POST" action="/Tracuu">
+       <div class="form-group">
+           <label for="SanBayDi">SanBayDi:</label>
+           <input type="text"
+                  name="SanBayDi"
+                  class="form-control"
+                  placeholder="San bay di..."
+                  id="SanBayDi">
+       </div>
+       <div class="form-group">
+           <label for="SanBayDen">SanBayDen:</label>
+           <input type="text"
+                  name="SanBayDen"
+                  class="form-control"
+                  placeholder="San bay den..."
+                  id="SanBayDen">
+       </div>
+       <button type="submit" class="btn btn-primary">Tra Cứu</button>
+   </form>
+    {% if err %}
+    <div class="alert alert-danger">
+    {{ err}}
+    </div>
+    {% endif %}
+{% endblock %}

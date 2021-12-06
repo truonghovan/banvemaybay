@@ -1,0 +1,104 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<hr></hr>
+<h1 class="text-center text-info">TUYẾN BAY</h1>
+<section class="flexslider-container" id="flexslider-container-1">
+<form style="padding: 10px; border: 2px solid black " method="post" >
+    <div class="form-row">
+        <div class="form-group-center col-md-6 ">
+            <label for="SanBayDi"  >Sân Bay Đi</label>
+                <select class="form-control" name="SanBayDi" id="SanBayDi">
+                    {% for e in tb %}
+                    <option class="text-center"> {{e.SanBayDi}} </option>
+                    {% endfor%}
+                </select>
+        </div>
+        <div class="form-group-center col-md-6 ">
+            <label for="SanBayDen"  >Sân Bay Đến</label>
+                <select class="form-control" name="SanBayDen" id="SanBayDen">
+                    {% for e in tb %}
+                    <option class="text-center"> {{e.SanBayDen}} </option>
+                    {% endfor%}
+                </select>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="hangve">Hạng Vé</label>
+        <select class="form-control" name="hangve" id="hangve">
+            {% for i in hv %}
+          <option>{{i.TenHangVe}}</option>
+            {% endfor%}
+        </select>
+      </div>
+    </div>
+<!--        <div class="form-group-center col-md-6 ">-->
+<!--            <label for="HangVe"  >Hang Ve</label>-->
+<!--                <select class="form-control" name="HangVe" id="HangVe">-->
+<!--                    {% for e in tb %}-->
+<!--                    <option class="text-center"> {{e.SanBayDen}} </option>-->
+<!--                    {% endfor%}-->
+<!--                </select>-->
+<!--        </div>-->
+</div>
+        <div  class="text-center">
+    <button class="btn btn-primary" style="margin-top:30px" type="submit" >
+        Tiếp Tục
+    </button>
+            </div>
+
+</form>
+     <hr>
+    </hr>
+     <div>
+         <img src="/static/images/maybaydep.jpg" alt="registration-img" />
+     </div><!-- end custom-form-img -->
+</section>
+
+
+        <!--======================= BEST FEATURES =====================-->
+        <section id="best-features" class="banner-padding black-features">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-dollar"></i></span>
+                        	<h3>Best Price Guarantee</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-lock"></i></span>
+                        	<h3>Safe and Secure</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-thumbs-up"></i></span>
+                        	<h3>Best Travel Agents</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-bars"></i></span>
+                        	<h3>Travel Guidelines</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                </div><!-- end row -->
+        	</div><!-- end container -->
+        </section><!-- end best-features -->
+
+
+
+        <!-- Page Scripts Starts -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/custom-navigation.js"></script>
+        <!-- Page Scripts Ends -->
+{% endblock %}

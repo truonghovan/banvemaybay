@@ -1,0 +1,36 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<h1 class="text-center text-info">THANH TOÁN</h1>
+<section class="flexslider-container" id="flexslider-container-1">
+<div class="col-md-4 col-xs-12" style="padding-bottom: 15px">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="static/images/the.jpg" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title" >Thẻ tín dung/Thẻ ghi nợ</h4>
+            <p class="card-text"></p>
+              <button type="submit" onclick="pay()" class="btn btn-info">Thanh toán</button>
+          </div>
+        </div>
+</div>
+    <div class="col-md-4 col-xs-12" style="padding-bottom: 15px">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="static/images/qr.png" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">Quét Mã QR</h4>
+            <p class="card-text"></p>
+              <button type="submit" onclick="pay()" class="btn btn-info">Thanh toán</button>
+          </div>
+        </div>
+</div>
+    <div class="col-md-4 col-xs-12" style="padding-bottom: 15px">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="static/images/MoMo.png" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">Thanh Toán MoMo</h4>
+            <p class="card-text"></p>
+              <input type="button" onclick="pay()" value="Thanh toan" class="btn btn-info"/>
+          </div>
+        </div>
+</div>
+</section>
+{% endblock %}

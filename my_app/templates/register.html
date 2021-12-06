@@ -1,0 +1,157 @@
+{% extends 'layout/base.html' %}
+    
+        <!--====== LOADER =====-->
+
+    
+    
+    	<!--======== SEARCH-OVERLAY =========-->       
+
+{% block content %}
+        <!--================ PAGE-COVER =================-->
+        <section class="page-cover" id="cover-registration">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                    	<h1 class="page-title">Registration Page</h1>
+                        <ul class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li class="active">Registration Page</li>
+                        </ul>
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end page-cover -->
+        
+        
+        <!--===== INNERPAGE-WRAPPER ====-->
+        <section class="innerpage-wrapper">
+        	<div id="registration" class="innerpage-section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                        
+                        	<div class="flex-content">
+                                <div class="custom-form custom-form-fields">
+                                    <h3>Registration</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <h1 class="text-center text-danger">ĐĂNG KÝ</h1>
+
+                                    {% if err_msg %}
+                                    <div class="alert alert-danger">
+                                        {{ err_msg }}
+                                    </div>
+                                    {% endif %}
+
+                                    <form method="post" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="name">Name:</label>
+                                            <input type="text"
+                                                   name="name"
+                                                   class="form-control"
+                                                   placeholder="Nhap name..."
+                                                   id="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Username:</label>
+                                            <input type="text"
+                                                   name="username"
+                                                   class="form-control"
+                                                   placeholder="Nhap username..."
+                                                   id="username" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="password">Password:</label>
+                                            <input type="password"
+                                                   name="password"
+                                                   class="form-control"
+                                                   placeholder="Nhap password..."
+                                                   id="password" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="confirm-password">Confirm password:</label>
+                                            <input type="password"
+                                                   name="confirm-password"
+                                                   class="form-control"
+                                                   placeholder="Nhap confirm password..."
+                                                   id="confirm-password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Cmnd">CMND:</label>
+                                            <input type="text"
+                                                   name="Cmnd"
+                                                   class="form-control"
+                                                   placeholder="Nhap CMND"
+                                                   id="Cmnd" required>
+                                        </div>
+
+                                        <input type="submit" value="ĐĂNG KÝ" class="btn btn-danger" />
+                                    </form>
+                                    
+                                    <div class="other-links">
+                                    	<p class="link-line">Already Have An Account ? <a href="/login">Login Here</a></p>
+                                    </div><!-- end other-links -->
+                                </div><!-- end custom-form -->
+                                
+                                <div class="flex-content-img custom-form-img">
+                                    <img src="/static/images/register-la-gi.png" class="img-responsive" alt="registration-img" />
+                                </div><!-- end custom-form-img -->
+                                    
+                                </div><!-- end custom-form-img -->
+                            </div><!-- end form-content -->
+                            
+                        </div><!-- end columns -->
+                    </div><!-- end row -->
+                </div><!-- end container -->         
+            </div><!-- end registration -->
+        </section><!-- end innerpage-wrapper -->
+        
+        
+        <!--======================= BEST FEATURES =====================-->
+        <section id="best-features" class="banner-padding black-features">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-dollar"></i></span>
+                        	<h3>Best Price Guarantee</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                   
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-lock"></i></span>
+                        	<h3>Safe and Secure</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                   
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-thumbs-up"></i></span>
+                        	<h3>Best Travel Agents</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                   
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-bars"></i></span>
+                        	<h3>Travel Guidelines</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                </div><!-- end row -->
+        	</div><!-- end container -->
+        </section><!-- end best-features -->
+        
+        
+
+        <!-- Page Scripts Starts -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/custom-navigation.js"></script>
+        <!-- Page Scripts Ends -->
+{% endblock %}

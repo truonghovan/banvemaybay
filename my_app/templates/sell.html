@@ -1,0 +1,105 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<hr>
+</hr>
+<h1 class="text-center text-info">THÔNG TIN HÀNH KHÁCH</h1>
+<section class="flexslider-container" id="flexslider-container-1">
+    {% for sg in sgt %}
+    {% if sg.SoGheTrong > 0%}
+<form style=" padding: 10px;border: 2px solid black;height: 300px " method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="giave">Giá vé</label>
+        <select class="form-control" name="giave" id="giave">
+            {% for i in hv %}
+          <option>{{i.DonGia}}</option>
+            {% endfor%}
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="Tenhanhhach">Họ Và Tên</label>
+          <input type="text" name="Tenhanhhach" class="form-control" id="Tenhanhhach" placeholder="Họ và Tên" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="Cmnd">CMND/CCCD</label>
+          <input type="number" name="Cmnd" class="form-control" id="Cmnd" placeholder="CMND/CCCD" required>
+        </div>
+      </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="Sdt">Số Điện Thoại</label>
+        <input type="number" name="Sdt" class="form-control" id="Sdt" required>
+    </div>
+      <div class="form-group col-md-6">
+        <label for="Gmail">Email</label>
+          <input type="email" name="Gmail" class="form-control" id="Gmail" placeholder="Email" required>
+        </div>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary" >Tiếp Tục</button>
+        <button class="btn btn-danger">
+            <a href="/tuyenbay">Quay Lại</a>
+        </button>
+        </div>
+</form>
+    {%else%}
+    <div class="text-center">
+    <h4>Chuyen bay da het ghe vui long chon chuyen bay khac!!!</h4>
+    <button class="btn btn-danger">
+            <a href="/chuyenbay">Quay Lại</a>
+        </button>
+    </div>
+    {%endif%}
+{% endfor %}
+</section>
+
+
+        <!--======================= BEST FEATURES =====================-->
+        <section id="best-features" class="banner-padding black-features">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-dollar"></i></span>
+                        	<h3>Best Price Guarantee</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-lock"></i></span>
+                        	<h3>Safe and Secure</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-thumbs-up"></i></span>
+                        	<h3>Best Travel Agents</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-bars"></i></span>
+                        	<h3>Travel Guidelines</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                </div><!-- end row -->
+        	</div><!-- end container -->
+        </section><!-- end best-features -->
+
+
+
+        <!-- Page Scripts Starts -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/custom-navigation.js"></script>
+        <!-- Page Scripts Ends -->
+{% endblock %}

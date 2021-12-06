@@ -1,0 +1,142 @@
+    {% extends 'layout/base.html' %}
+        <!--====== LOADER =====-->
+
+    
+    
+    	<!--======== SEARCH-OVERLAY =========-->       
+
+        
+        
+        <!--============= TOP-BAR ===========-->
+
+        
+        {% block content %}
+		<!--========================= FLEX SLIDER =====================-->
+
+        <section class="flexslider-container" id="flexslider-container-1">
+            <img src="/static/images/1.jpg">
+            <div class="search-tabs" id="search-tabs-1">
+                <div class="col-md-7 col-md-offset-1 container-form-booking" style="padding-bottom:30px;text-align: center;margin-left:310px">
+						<div class="booking-form">
+							<form method="post">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label"  style="color:#333">Nơi đi</span>
+											<select class="form-control" name="SanBayDi" id="SanBayDi">
+                                                {% for e in tb %}
+                                                <option class="text-center"> {{e.SanBayDi}} </option>
+                                                {% endfor%}
+                                            </select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label" style="color:#333">Nơi đến</span>
+											<select class="form-control" name="SanBayDen" id="SanBayDen">
+                                                {% for e in tb %}
+                                                <option class="text-center"> {{e.SanBayDen}} </option>
+                                                {% endfor%}
+                                            </select>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label" style="color:#333">Ngày đi</span>
+											<input class="form-control" type="date" required name="Ngaydi">
+										</div>
+									</div>
+
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<span class="form-label" style="color:#333">Người lớn(18+)</span>
+											<select class="form-control">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<span class="form-label" style="color:#333">Trẻ em (0-17)</span>
+											<select class="form-control">
+												<option>0</option>
+												<option>1</option>
+												<option>2</option>
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<span class="form-label" style="color:#333">Hạng vé</span>
+											<select class="form-control" name="hangve" id="hangve">
+                                                {% for i in hv %}
+                                              <option>{{i.TenHangVe}}</option>
+                                                {% endfor%}
+                                            </select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-btn">
+									<button class="submit-btn" style="background-color:#333" type="submit">Tìm kiếm</button>
+								</div>
+							</form>
+						</div>
+					</div>
+            	<div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs center-tabs">
+                                <li><a href="/tuyenbay" data-toggle="tab"><span><i class="fa fa-building"></i></span><span class="st-text">Tuyến Bay</span></a></li>
+                                <li><a href="#" data-toggle="tab"><span><i class="fa fa-suitcase"></i></span><span class="st-text">NEWS</span></a></li>
+                                <li><a href="#cruise" data-toggle="tab"><span><i class="fa fa-ship"></i></span><span class="st-text">Cruise</span></a></li>
+                                <li><a href="#cars" data-toggle="tab"><span><i class="fa fa-car"></i></span><span class="st-text">Cars</span></a></li>
+                            </ul>
+
+
+
+
+
+
+
+                            </div><!-- end tab-content -->
+
+                        </div><!-- end columns -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+
+            </div><!-- end search-tabs -->
+
+        </section><!-- end flexslider-container -->
+
+
+        {% endblock  %}
+        
+        
+        <!--========================= NEWSLETTER-1 ==========================-->
+
+        
+        <!--======================= FOOTER =======================-->
+
+        
+        <!-- Page Scripts Starts -->
+        <script src="static/pack/js/jquery.min.js"></script>
+        <script src="static/pack/js/jquery.magnific-popup.min.js"></script>
+        <script src="static/pack/js/bootstrap.min.js"></script>
+        <script src="static/pack/js/jquery.flexslider.js"></script>
+        <script src="static/pack/js/bootstrap-datepicker.js"></script>
+        <script src="static/pack/js/owl.carousel.min.js"></script>
+        <script src="static/pack/js/custom-navigation.js"></script>
+        <script src="static/pack/js/custom-flex.js"></script>
+        <script src="static/pack/js/custom-owl.js"></script>
+        <script src="static/pack/js/custom-date-picker.js"></script>
+        <script src="static/pack/js/custom-video.js"></script>
+        <!-- Page Scripts Ends -->

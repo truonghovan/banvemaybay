@@ -1,0 +1,41 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}GIO HANG{% endblock %}
+
+{% block content %}
+<h1 class="text-center text-info">THONG TIN</h1>
+<form method="post">
+<table class="table">
+    <tr>
+        <th>Tuyến Bay</th>
+        <th>Hạng Vé</th>
+        <th>Giá Vé</th>
+        <th>Tên Hành Khách</th>
+        <th>Số Điện Thoại</th>
+        <th>CMND</th>
+        <th>Gmail </th>
+    </tr>
+
+
+        <tr >
+            <td name="tuyenbay" >{{session['info1'].SanBayDi}}-{{session['info1'].SanBayDen}}</td>
+            <td >{{ session['info1'].hangve }}</td>
+            <td >{{ session['info'].giave }}</td>
+            <td >{{ session['info'].Tenhanhhach }}</td>
+            <td >{{ session['info'].Sdt }}</td>
+            <td >{{ session['info'].Cmnd }}</td>
+            <td >{{ session['info'].Gmail }}</td>
+            <td>
+            </td>
+        </tr>
+</table>
+<div class="text-center">
+    <button type="submit"
+           class="btn btn-success" >Thanh toan</button>
+    <button class="btn btn-danger">
+        <a href="/sell">Quay Lại</a>
+        </button>
+</div>
+</form>
+
+{% endblock %}

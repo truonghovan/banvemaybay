@@ -1,0 +1,32 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<h1 class="text-center text-info">CHUYẾN BAY</h1>
+{{session['2']}}
+{%if session['2']==0%}
+    <div class="text-center">
+    <h4 >Không có chuyến bay nào được tìm thấy!!!</h4>
+    <button class="btn btn-danger" style="margin-bottom: 20px">
+            <a href="/tuyenbay">Quay Lại</a>
+        </button>
+    </div>
+{%else%}
+{%for i in cb%}
+<div class="card-flight" style="padding: 10px; border: 2px solid black; margin-top: 10px;margin-bottom: 10px;margin-right:300px;margin-left: 300px ">
+    <div style="margin-left:250px"><h4>StarTravels Airline</h4></div>
+    <h5> &emsp;&emsp;- Sân Bay Khởi Hành: {{session['info1'].SanBayDi}}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- Sân Bay Đến: {{session['info1'].SanBayDen}} </h5>
+    <h5>&emsp;&emsp;- Thời Gian Bắt Đầu Bay: {{i.Thoigianbay}}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- Loại: Bay Thẳng</h5>
+    <a href="javascript:;" class="btn btn-primary" style="margin-left:325px;" onclick="addToCart('{{i.Thoigianbay}}')">
+      Chon
+    </a>
+</div>
+<div class="card-flight">
+
+</div>
+{%endfor%}
+<div class="text-center">
+<button class="btn btn-primary" style="margin-bottom: 20px;margin-top: 20px">
+            <a href="/sell" style="color: yellow">Tiếp Tục</a>
+        </button>
+</div>
+{%endif%}
+{% endblock %}

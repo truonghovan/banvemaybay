@@ -1,0 +1,118 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<hr>
+</hr>
+
+<div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs center-tabs text-center">
+                                <li><a href="/tuyenbay" data-toggle="tab"><span><i class="fa fa-building"></i></span><span class="st-text">Tuyến Bay</span></a></li>
+                                <li><a href="/doanhthuthang" data-toggle="tab"><span><i class="fa fa-suitcase"></i></span><span class="st-text">Doanh Thu</span></a></li>
+                                <li><a href="#cruise" data-toggle="tab"><span><i class="fa fa-ship"></i></span><span class="st-text">Cruise</span></a></li>
+                                <li><a href="#cars" data-toggle="tab"><span><i class="fa fa-car"></i></span><span class="st-text">Cars</span></a></li>
+                            </ul>
+
+
+
+
+
+
+
+                            </div><!-- end tab-content -->
+
+                        </div><!-- end columns -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+
+
+        <img src="/static/images/hinh-anh-may-bay-dep.jpg">
+
+<ul class="nav nav-tabs">
+	<li class="nav-item">
+	  <a class="nav-link active" data-toggle="tab" href="#admin">Thông tin hành khách</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" data-toggle="tab" href="#admin2">Thông tin chuyến bay</a>
+	</li>
+
+
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+	<div class="tab-pane container active" id="admin">
+		<h3>Trang thông tin khách</h3>
+		<div id="dulieudangkyadmin" contenteditable="true" class="container">
+			<div class="row">
+				<div class="table-responsive col-12">
+				  <table class="table table-striped table-bordered table-hover">
+					<thead>
+					  <tr>
+						<th scope="col">CMND</th>
+						<th scope="col">Họ Tên</th>
+						<th scope="col">Mã</th>
+
+						<th scope="col">Gmail</th>
+						<th scope="col">Điện Thoại</th>
+
+					  </tr>
+					</thead>
+					<tbody>
+						{% for d in hanhkhach %}
+					   <tr>
+						<td>{{ d.Cmnd }}</td>
+						<td>{{ d.TenHanhKhach }}</td>
+						<td>{{ d.MaHanhKhach }}</td>
+
+						<td>{{ d.Gmail }}</td>
+						<td>{{ d.Sdt }}</td>
+
+					  </tr>
+					  {% endfor %}
+					</tbody>
+				  </table>
+				</div>
+			</div>
+		</div>
+	</div>
+	  <div class="tab-pane container active" id="admin2">
+		<h3>Trang thông chuyến bay</h3>
+		<div id="dulieudangkyadmin2" contenteditable="true" class="container">
+			<div class="row">
+				<div class="table-responsive col-12">
+				  <table class="table table-striped table-bordered table-hover">
+					<thead>
+					  <tr>
+						<th scope="col">Sân bay đi</th>
+						<th scope="col">Sân bay đến</th>
+						<th scope="col">Số ghế trống</th>
+						<th scope="col">Số ghế đặt</th>
+						<th scope="col">Thời gian bay</th>
+
+					  </tr>
+					</thead>
+					<tbody>
+						{% for k in ket.values() %}
+						<tr>
+						<td>{{ k[0]}}</td>
+						<td>{{ k[1]}}</td>
+							<td>{{ k[3]}}</td>
+							<td>{{ k[4]}}</td>
+							<td>{{ k[2]}}</td>
+					  </tr>
+						{% endfor %}
+					</tbody>
+				  </table>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+{% for da in data%}
+<h1>{{da.sanbaydi}}</h1>
+{%endfor%}
+<a class="btn" href="/tuyenbay">Tra cứu tuyến bay</a>
+{% endblock %}
+
+
+

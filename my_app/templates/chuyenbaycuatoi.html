@@ -1,0 +1,21 @@
+
+{% extends 'layout/base.html' %}
+{% block content %}
+<h1 class="text-center text-info">Chuyến bay của tôi</h1>
+<section class="flexslider-container" id="flexslider-container-1">
+<form style="padding: 10px; border: 2px solid black ;text-align: center;" method="post" action="chuyenbaytoi" >
+    <div class="form-row">
+        <div class="form-group-center col-md-6 ">
+            <label for="cmnd"  >Số CMND của bạn</label>
+                <input class="form-control" name="cmnd" id="cmnd" required>
+        </div>
+</div>
+    <div  class="text-center">
+        <button class="btn btn-primary" style="margin-top:30px; " type="submit" >
+            Tìm kiếm
+        </button>
+    </div>
+
+</form>
+</section>
+{% endblock %}
